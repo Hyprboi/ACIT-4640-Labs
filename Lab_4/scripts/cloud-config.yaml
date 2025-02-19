@@ -1,0 +1,12 @@
+#cloud-config
+users:
+  - name: web
+    primary_group: web
+    groups: wheel
+    shell: /bin/bash
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    ssh-authorized-keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDHiaxoJ6eAGGDcCq9ttzL2stmVo5TAR286VI4kAlv3+AF7FVDe9EP/pqW9OuZfhQ9Z+7qhaQIHveT6fxKbvbrgM8ruSxpwJmUlmreHyuoGjYlk8IzlkIaLpVTuUxPo0FgXcOOcmfgYXws6jxPVQL6IEzzBetI9noYO9z2qc62CmijqA6U8+YO7gk1CYVHWVBuf/BUOvhHDxwCbEjh+cZKMloq6exds7aelS75fWiWPZFBf5dwJWH8P1KQBL5JnxCi3AZZshWf20eqPhV98+cea37AS0w07tVyye6QJfJAAT1zx4XU5gFJaintv3K78Ry4r5TBn3tJBxT09qlZS0KgSOJvu7HTp2IQhQrsUtpoY7LETp0KY4xnilOz+Vj78al4nrM/yd/44t+m0YKZbQ8HZ1bYh8tuiDk/8L7xMFhg5HKhjV/yjYnpRGXfwx+B4Oua9AUD0Y/vcHq0fdcuoVWbSRt7R29FYHYc9rPSfxBmf0f89nI+hk5I3OFbPZQdfyWSOL6qQ4L1vvClq2V5dbDC45dcaMAqH8yg0RDxGQYeOpcsAIoPVNvcw720WazLnhPRNbhFkolzOl9yLvdc4va/ITBUWr+W2UD4oHu0wIGdmrTJ/8Nqx32/+kiYUbFl06WzYWHZsXNt6ZHl5RVvgoew8iWB/1RG6aqrDoJ4lnh7YVQ==
+packages:
+  - nginx
+  - nmap
